@@ -42,10 +42,10 @@ anchors = "on"
 [extra]
 
 sections = [
-  { name = "posts", path = "/posts", is_external = false },
-  { name = "tags", path = "/tags", is_external = false },
-  { name = "about", path= "/about", is_external = false },
-  { name = "categories", path= "/categories", is_external = false },
+  { name = "Posts", path = "/posts", is_external = false },
+  { name = "Tags", path = "/tags", is_external = false },
+  { name = "Categories", path= "/categories", is_external = false },
+  { name = "Collections", path= "/collections", is_external = false },
   # { name = "github", path = "https://github.com/<your-username>", is_external = true },
 ]
 blog_section_path = "/posts"
