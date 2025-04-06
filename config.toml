@@ -6,7 +6,7 @@
 #=========================================================================================
 
 base_url = "https://alex-song.com"
-title = "Song's Blog"
+title = "Alex's Blog"
 description = "Blog tracking daily learning"
 default_language = "en"
 theme = "serene"
