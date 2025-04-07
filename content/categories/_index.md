@@ -1,6 +1,6 @@
 +++
-title = "Tags"
-description = "Page of tags"
+title = "Categories"
+description = "Page of categories"
 template = "prose.html"
 insert_anchor_links = "none"
 
