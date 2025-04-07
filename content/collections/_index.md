@@ -8,8 +8,6 @@ insert_anchor_links = "none"
 lang = 'en'
 footer = false
 
-# title = "Tags"
-
 math = false
 mermaid = false
 copy = false
