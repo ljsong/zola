@@ -1,20 +1,44 @@
 [[collection]]
-type = "card"
+type = "art"
 title = "Tokio"
+subtitle = "Sbutitle"
 link = "https://example.com"
+img = "https://cdn.deepseek.com/logo.png?x-image-process=image%2Fresize%2Cw_1920"
 content = "Tokio is an asynchronous runtime for the Rust programming language. It provides the building blocks needed for writing network applications. It gives the flexibility to target a wide range of systems, from large servers with dozens of cores to small embedded devices."
-tags = ["rust", "async", "runtime"]
+footer = "Footer"
 
 [[collection]]
-type = "card"
-title = "Kubernetes"
+type = "art"
+title = "Tokio"
+subtitle = "Sbutitle"
 link = "https://example.com"
-content = "Kubernetes, also known as K8s, is an open source system for managing containerized applications across multiple hosts. It provides basic mechanisms for the deployment, maintenance, and scaling of applications."
-tags = ["k8s", "golang"]
+img = "https://cdn.deepseek.com/logo.png?x-image-process=image%2Fresize%2Cw_1920"
+content = "Tokio is an asynchronous runtime for the Rust programming language. It provides the building blocks needed for writing network applications. It gives the flexibility to target a wide range of systems, from large servers with dozens of cores to small embedded devices."
+footer = "Footer"
 
 [[collection]]
-type = "card"
-title = "Next.js"
+type = "art"
+title = "Tokio"
+subtitle = "Sbutitle"
 link = "https://example.com"
-content = "Next.js is a React framework for building full-stack web applications. You use React Components to build user interfaces, and Next.js for additional features and optimizations."
-tags = ["typescript", "react", "frontend"]
+img = "https://cdn.deepseek.com/logo.png?x-image-process=image%2Fresize%2Cw_1920"
+content = "Tokio is an asynchronous runtime for the Rust programming language. It provides the building blocks needed for writing network applications. It gives the flexibility to target a wide range of systems, from large servers with dozens of cores to small embedded devices."
+footer = "Footer"
+
+[[collection]]
+type = "art"
+title = "Tokio"
+subtitle = "Sbutitle"
+link = "https://example.com"
+img = "https://cdn.deepseek.com/logo.png?x-image-process=image%2Fresize%2Cw_1920"
+content = "Tokio is an asynchronous runtime for the Rust programming language. It provides the building blocks needed for writing network applications. It gives the flexibility to target a wide range of systems, from large servers with dozens of cores to small embedded devices."
+footer = "Footer"
+
+[[collection]]
+type = "art"
+title = "Tokio"
+subtitle = "Sbutitle"
+link = "https://example.com"
+img = "https://cdn.deepseek.com/logo.png?x-image-process=image%2Fresize%2Cw_1920"
+content = "Tokio is an asynchronous runtime for the Rust programming language. It provides the building blocks needed for writing network applications. It gives the flexibility to target a wide range of systems, from large servers with dozens of cores to small embedded devices."
+footer = "Footer"
