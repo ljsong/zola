@@ -78,4 +78,4 @@
 	url = https://github.com/VcamX/protobuf-syntax-highlighting.git
 [submodule "themes/serene"]
 	path = themes/serene
-	url = git@github.com:ljsong/serene.git
+	url = git@github.com:isunjn/serene.git
