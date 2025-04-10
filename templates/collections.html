@@ -107,7 +107,7 @@
     let html = "";
 
     // 上一页按钮
-    html += `<button onclick="paginateTab('${tabName}', ${page - 1})" ${page === 1 ? "disabled" : ""}>« Prev</button>`;
+    html += `<button onclick="paginateTab('${tabName}', ${page - 1})" ${page === 1 ? "disabled" : ""}><</button>`;
 
     // 页码按钮
     for (let i = 1; i <= totalPages; i++) {
@@ -115,7 +115,7 @@
     }
 
     // 下一页按钮
-    html += `<button onclick="paginateTab('${tabName}', ${page + 1})" ${page === totalPages ? "disabled" : ""}>Next »</button>`;
+    html += `<button onclick="paginateTab('${tabName}', ${page + 1})" ${page === totalPages ? "disabled" : ""}>></button>`;
 
     pagination.innerHTML = html;
   }
