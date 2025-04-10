@@ -7,28 +7,8 @@
   box-sizing: border-box;
 }
 
-/* Web Fonts */
-/* monda-regular - latin */
-@font-face {
-  font-family: 'Monda';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Monda Regular'), local('Monda-Regular'),
-       url('/fonts/webfonts/monda-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('/fonts/webfonts/monda-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* monda-700 - latin */
-@font-face {
-  font-family: 'Monda';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Monda Bold'), local('Monda-Bold'),
-       url('/fonts/webfonts/monda-v7-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('/fonts/webfonts/monda-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
 body {
-  font-family: "Monda", var(--main-font);
+  font-family: var(--main-font);
   background-color: var(--bg-color);
   color: var(--text-color);
   font-size: var(--font-size);
@@ -133,6 +113,41 @@ a:focus-visible {
 
   .tab-content.show {
     display: block;
+  }
+
+  .pagination {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .pagination button {
+    background-color: #eee;
+    border: none;
+    padding: 3px 6px;
+    margin: 0 3px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 0.8em;
+    transition: background-color 0.2s ease;
+  }
+
+  .pagination button:hover:not(:disabled) {
+    background-color: #ccc;
+  }
+
+  .pagination button.active {
+    background-color: #999;
+    color: white;
+  }
+
+  .pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .tab-entry {
+    display: inline-block;
+    gap: 1em;
   }
 }
 
@@ -1157,7 +1172,7 @@ body.homepage {
   }
 
   main {
-    font-family: "Monda", sans-serif;
+    font-family: var(--main-font);
     width: 100%;
     min-height: 75vh;
     min-height: 75dvh;
@@ -1254,7 +1269,7 @@ body.homepage {
   }
 
   #brief {
-    font-family: "Monda", sans-serif;
+    font-family: var(--main-font);
     font-size: 1em;
     padding: 30px 15px;
   }
@@ -1349,7 +1364,6 @@ dialog#rss-mask {
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 footer {
-  font-family: "Monda";
   line-height: 18px;
   font-size: 0.7rem;
   margin-top: auto;

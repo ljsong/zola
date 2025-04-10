@@ -15,37 +15,29 @@
       {% set file = section.extra.files[loop.index0] %}
       {% set data = load_data(path="content" ~ section.path ~ file, format="toml") %}
       <div id="{{ name }}" class="tab-content{% if loop.first %} show{% endif %}">
-        <section class="collection-wrapper">
+        <section class="collection-wrapper" id="{{ name }}-items">
           {% for item in data.collection %}
-            {% if item.type == "card" %}
-              {{ macros::card(item=item) }}
-            {% elif item.type == "card_simple" %}
-              {{ macros::card_simple(item=item) }}
-            {% elif item.type == "entry" %}
-              {{ macros::entry(item=item) }}
-            {% elif item.type == "box" %}
-              {{ macros::box(item=item) }}
-            {% elif item.type == "art" %}
-              {{ macros::art(item=item) }}
-            {% elif item.type == "art_simple" %}
-              {{ macros::art_simple(item=item) }}
-            {% elif item.type == "br" %}
-              <br />
-            {% endif %}
+            <div class="tab-entry" data-tab="{{ name }}">
+              {% if item.type == "card" %}
+                {{ macros::card(item=item) }}
+              {% elif item.type == "card_simple" %}
+                {{ macros::card_simple(item=item) }}
+              {% elif item.type == "entry" %}
+                {{ macros::entry(item=item) }}
+              {% elif item.type == "box" %}
+                {{ macros::box(item=item) }}
+              {% elif item.type == "art" %}
+                {{ macros::art(item=item) }}
+              {% elif item.type == "art_simple" %}
+                {{ macros::art_simple(item=item) }}
+              {% elif item.type == "br" %}
+                <br />
+              {% endif %}
+            </div>
           {% endfor %}
         </section>
+        <div class = "pagination" id = "{{ name }}-pagination"></div>
       </div>
     {% endfor %}
   </div>
 </div>
-
-<script>
-function showTab(tabName, element) {
-  const contents = document.querySelectorAll(".tab-content");
-  contents.forEach(c => c.classList.remove("show"));
-  const items = document.querySelectorAll(".tab-item");
-  items.forEach(i => i.classList.remove("active"));
-  document.getElementById(tabName).classList.add("show");
-  element.classList.add("active");
-}
-</script>

@@ -74,6 +74,9 @@
 {% block script %}
 <script src="/js/lightense.min.js"></script>
 <script>
+  const ITEMS_PER_PAGE = 3;
+  const tabPageState = {};
+
   function showTab(tabName, element) {
     const contents = document.querySelectorAll(".tab-content");
     contents.forEach(c => c.classList.remove("show"));
@@ -82,5 +85,47 @@
     document.getElementById(tabName).classList.add("show");
     element.classList.add("active");
   }
+
+  function paginateTab(tabName, page) {
+    const entries = document.querySelectorAll(`[data-tab="${tabName}"]`);
+    const total = entries.length;
+    const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
+
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+
+    tabPageState[tabName] = page;
+
+    const start = (page - 1) * ITEMS_PER_PAGE;
+    const end = start + ITEMS_PER_PAGE;
+
+    entries.forEach((el, idx) => {
+      el.style.display = (idx >= start && idx < end) ? "block" : "none";
+    });
+
+    const pagination = document.getElementById(`${tabName}-pagination`);
+    let html = "";
+
+    // 上一页按钮
+    html += `<button onclick="paginateTab('${tabName}', ${page - 1})" ${page === 1 ? "disabled" : ""}>« Prev</button>`;
+
+    // 页码按钮
+    for (let i = 1; i <= totalPages; i++) {
+      html += `<button onclick="paginateTab('${tabName}', ${i})"${i === page ? ' class="active"' : ''}>${i}</button>`;
+    }
+
+    // 下一页按钮
+    html += `<button onclick="paginateTab('${tabName}', ${page + 1})" ${page === totalPages ? "disabled" : ""}>Next »</button>`;
+
+    pagination.innerHTML = html;
+  }
+
+  // 初始化第一个 tab 的分页
+  document.addEventListener("DOMContentLoaded", () => {
+    const firstTab = document.querySelector(".tab-content.show");
+    if (firstTab) {
+      paginateTab(firstTab.id, 1);
+    }
+  });
 </script>
 {% endblock script %}
