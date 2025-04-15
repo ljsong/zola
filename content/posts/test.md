@@ -8,11 +8,14 @@ insert_anchor_links = "right"
 generate_feeds = true
 date = 2025-03-20
 
+[taxonomies]
+tags=["C++", "Template"]
+
 [extra]
 lang = "en"
 
-
 date_format = "%b %-d, %Y"
+disqus_comment = true
 
 categorized = true # posts can be categorized
 back_to_top = true # show back-to-top button
@@ -27,4 +30,4 @@ outdate_alert_text_after = " days ago and may be out of date."
 +++
 
 
-This is a test blog
+### This is a test blog
