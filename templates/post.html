@@ -148,22 +148,23 @@
             })();
           </script>
           <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <p style="font-size: 80%; margin-bottom: 0px; text-align: right; color: #AAA; margin-top: 8px;">如果Disqus无法加载，可以使用下面的Giscus评论（需要使用Github账号)</p>
       {% endif %}
-
       {% if page.extra.comment is defined %}{% set show_comment = page.extra.comment %}{% else %}{% set show_comment = section.extra.comment %}{% endif %}
       {% if show_comment %}
       <div class="giscus"></div>
       {% include "_giscus_script.html" %}
       {% endif %}
 
-      {%if page.extra.disqus_comment %}
-        <script id="dsq-count-scr" src="//alex-song-com.disqus.com/count.js" async></script>
-      {% endif %}
     </div>
 
     {% include "_footer.html" %}
   </main>
 </div>
+
+  {%if page.extra.disqus_comment %}
+  <script id="dsq-count-scr" src="//alex-song-com.disqus.com/count.js" async></script>
+  {% endif %}
 {% endblock content %}
 
 {% block script %}
