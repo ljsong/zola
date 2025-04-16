@@ -1671,6 +1671,35 @@ body.tag-list {
     }
   }
 
+  .tag-nav {
+    margin-bottom: 2rem;
+  }
+
+  .tag-link {
+    color: rgba(0,0,0,0.44);
+    background-color: #fcfcfc;
+    border-radius: 5px;
+    border: 1px solid #f0f0f0;
+    padding: 3px 10px;
+    margin: 4px 8px 4px 0;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .tag-link:hover {
+      text-decoration: underline;
+  }
+
+  .tag-posts h2 {
+      margin-top: 2rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.3rem;
+  }
+
+  .tag-posts ul {
+    list-style-type: circle;
+  }
+
 }
 
 /* tag single page

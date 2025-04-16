@@ -18,9 +18,23 @@
   {{ macros::back_link(path = get_url(path="/")) }}
   <main>
     <h1 class="title">Tags</h1>
-    <div class="tags">
-      {% for tag in terms -%}
-      <a class="instant" href="{{ tag.permalink }}"># {{ tag.name | lower }}</a>
+    <div class="tag-nav">
+      {% for tag in terms %}
+          <a href="#{{ tag.name | slugify }}" class="tag-link">{{ tag.name }}</a>
+      {% endfor %}
+    </div>
+
+    <hr />
+
+    <!-- 标签对应的文章列表 -->
+    <div class="tag-posts">
+      {% for tag in terms %}
+        <h2 id="{{ tag.name | slugify }}">{{ tag.name }} ({{tag.pages | length }})</h2>
+          <ul>
+            {% for page in tag.pages %}
+              <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+            {% endfor %}
+          </ul>
       {% endfor %}
     </div>
   </main>
