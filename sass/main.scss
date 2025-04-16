@@ -1645,6 +1645,7 @@ body.tag-list {
 
   main {
     margin: 0 15px;
+    font-family: var(--post-font);
   }
 
   .title {
@@ -1660,7 +1661,7 @@ body.tag-list {
     gap: 1em 2em;
 
     a {
-      color: var(--primary-color);
+      color: #1eaedb;
       text-decoration: none;
       line-height: 1.25;
 
@@ -1676,12 +1677,13 @@ body.tag-list {
   }
 
   .tag-link {
+    font-family: var(--post-font);
     color: rgba(0,0,0,0.44);
     background-color: #fcfcfc;
     border-radius: 5px;
     border: 1px solid #f0f0f0;
-    padding: 3px 10px;
-    margin: 4px 8px 4px 0;
+    padding: 4px 8px;
+    margin: 4px 10px 4px 0;
     display: inline-block;
     text-decoration: none;
   }
@@ -1691,6 +1693,8 @@ body.tag-list {
   }
 
   .tag-posts h2 {
+      font-family: var(--post-font);
+      color: #606970;
       margin-top: 2rem;
       border-bottom: 1px solid #eee;
       padding-bottom: 0.3rem;
@@ -1698,6 +1702,10 @@ body.tag-list {
 
   .tag-posts ul {
     list-style-type: circle;
+  }
+
+  .tag-posts ul a{
+    color: #1EAEDB;
   }
 
 }
