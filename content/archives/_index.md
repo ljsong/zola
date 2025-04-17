@@ -1,7 +1,7 @@
 +++
-title = "Categories"
-description = "Page of categories"
-template = "categories.html"
+title = "Archives"
+description = "Page of archives"
+template = "prose.html"
 insert_anchor_links = "none"
 
 [extra]

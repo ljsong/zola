@@ -1450,6 +1450,8 @@ body.blog {
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 body.post {
+  font-family: var(--post-font);
+
   #wrapper {
     display: flex;
     justify-content: space-between;

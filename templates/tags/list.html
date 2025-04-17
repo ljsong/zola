@@ -17,7 +17,6 @@
 <div id="wrapper">
   {{ macros::back_link(path = get_url(path="/")) }}
   <main>
-    <h1 class="title">Tags</h1>
     <div class="tag-nav">
       {% for tag in terms %}
           <a href="#{{ tag.name | slugify }}" class="tag-link">{{ tag.name }}<sup>{{tag.pages | length}}</sup></a>

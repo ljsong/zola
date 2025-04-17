@@ -1,0 +1,25 @@
+{% import "macros/prose.html" as macros %}
+{% extends "_base.html" %}
+
+{% block page %}category-list{% endblock page%}
+{% block lang -%}
+{% set blog_section_path = config.extra.blog_section_path | trim_start_matches(pat="/") %}
+{% set section_md_path = blog_section_path ~ "/_index.md"%}
+{% set section = get_section(path=section_md_path, metadata_only=true) %}
+{%- if section.extra.lang %}{{ section.extra.lang }}{% else %}{{ lang }}{% endif -%}
+{%- endblock lang %}
+{% block title %}Tags{% endblock title %}
+{% block desc %}
+  <meta name="description" content="Categories">
+{% endblock desc %}
+
+{% block content %}
+<div id="wrapper">
+  {{ macros::back_link(path = get_url(path="/")) }}
+  <main>
+  </main> 
+  {% if section.extra.footer %}
+    {% include "_footer.html" %}
+  {% endif %}
+</div>
+{% endblock content %}

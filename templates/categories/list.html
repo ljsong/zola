@@ -1,3 +1,42 @@
-<script>
-  window.location.assign('{{ get_url(path="/") }}');
-</script>
+{% import "macros/prose.html" as macros %}
+{% extends "_base.html" %}
+
+{% block page %}tag-list{% endblock page%}
+{% block lang -%}
+{% set blog_section_path = config.extra.blog_section_path | trim_start_matches(pat="/") %}
+{% set section_md_path = blog_section_path ~ "/_index.md"%}
+{% set section = get_section(path=section_md_path, metadata_only=true) %}
+{%- if section.extra.lang %}{{ section.extra.lang }}{% else %}{{ lang }}{% endif -%}
+{%- endblock lang %}
+{% block title %}Tags{% endblock title %}
+{% block desc %}
+  <meta name="description" content="Tags">
+{% endblock desc %}
+
+{% block content %}
+<div id="wrapper">
+  {{ macros::back_link(path = get_url(path="/")) }}
+  <main>
+    <div class="tag-nav">
+      {% for tag in terms %}
+          <a href="#{{ tag.name | slugify }}" class="tag-link">{{ tag.name }}<sup>{{tag.pages | length}}</sup></a>
+      {% endfor %}
+    </div>
+
+    <hr />
+
+    <!-- 标签对应的文章列表 -->
+    <div class="tag-posts">
+      {% for tag in terms %}
+        <h2 id="{{ tag.name | slugify }}">{{ tag.name }} ({{tag.pages | length }})</h2>
+          <ul>
+            {% for page in tag.pages %}
+              <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+            {% endfor %}
+          </ul>
+      {% endfor %}
+    </div>
+  </main>
+  {% include "_footer.html" %}
+</div>
+{% endblock content %}

@@ -45,6 +45,7 @@ sections = [
   { name = "Posts", path = "/posts", is_external = false },
   { name = "Tags", path = "/tags", is_external = false },
   { name = "Categories", path= "/categories", is_external = false },
+  { name = "Archives", path= "/archives", is_external = false },
   { name = "Collections", path= "/collections", is_external = false },
   # { name = "github", path = "https://github.com/<your-username>", is_external = true },
 ]
@@ -69,4 +70,4 @@ reaction = false # Whether to enable anonymous emoji reactions (Note: You need t
 reaction_align = "right" # "left" | "center" | "right"
 reaction_endpoint = "https://alex-song.com/api/reaction"
 
-disqus_shortname = "alex-song-org"
+disqus_shortname = "alex-song-com"
