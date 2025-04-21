@@ -1,7 +1,7 @@
 +++
 title = "Archives"
 description = "Page of archives"
-template = "prose.html"
+template = "archives.html"
 insert_anchor_links = "none"
 
 [extra]

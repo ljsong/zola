@@ -10,6 +10,7 @@ date = 2025-03-20
 
 [taxonomies]
 tags=["C++", "Template"]
+categories=["Test"]
 
 [extra]
 lang = "en"
