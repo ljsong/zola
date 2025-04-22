@@ -618,7 +618,7 @@ body.collections-page {
     max-width: var(--main-max-width);
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: normal;
   }
 
   article {
@@ -627,6 +627,26 @@ body.collections-page {
 
   .giscus {
     padding: 0 15px;
+  }
+}
+
+body.archive-page {
+  main {
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0 auto;
+    max-width: var(--main-max-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+  }
+
+  article {
+    padding: 0 15px;
+  }
+
+  ul {
+    list-style-type: circle;
   }
 }
 
