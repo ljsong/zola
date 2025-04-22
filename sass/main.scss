@@ -80,7 +80,7 @@ a:focus-visible {
   .tab-item {
     padding: 5px 20px;
     cursor: pointer;
-    background-color: #eee;
+    background-color: var(--bg-color);
     border-radius: 10px 10px 0 0;
     transition: background-color 0.2s ease;
   }
@@ -90,7 +90,7 @@ a:focus-visible {
   }
 
   .tab-item.active {
-    background-color: #fff;
+    background-color: var(--bg-color);
     font-weight: bold;
     border: 1px solid #ccc;
     border-bottom: none;
@@ -102,7 +102,7 @@ a:focus-visible {
     border: 1px solid #ccc;
     border-top: none;
     border-radius: 0 0 10px 10px;
-    background-color: #fff;
+    background-color: var(--bg-color);
     min-height: 300px;
     padding: 20px;
   }
@@ -640,14 +640,28 @@ body.archive-page {
     flex-direction: column;
     justify-content: normal;
   }
+  
+  h1 {
+    font-family: var(--post-font);
+  }
+
+  h2 {
+    font-family: var(--post-font);
+    color: #606970;
+  }
 
   article {
     padding: 0 15px;
+    ul {
+      list-style-type: circle;
+
+      a {
+        color: #1EAEDB;
+      }
+    }
   }
 
-  ul {
-    list-style-type: circle;
-  }
+
 }
 
 /* collections
@@ -1700,12 +1714,13 @@ body.tag-list {
 
   .tag-link {
     font-family: var(--post-font);
+    font-size: 12px;
     color: rgba(0,0,0,0.44);
     background-color: #fcfcfc;
     border-radius: 5px;
     border: 1px solid #f0f0f0;
-    padding: 4px 8px;
-    margin: 4px 10px 4px 0;
+    padding: 2px 5px;
+    margin: 2px 8px 2px 0;
     display: inline-block;
     text-decoration: none;
   }
